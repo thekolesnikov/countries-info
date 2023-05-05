@@ -1,0 +1,38 @@
+.header {
+    padding: 2rem 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__dark {
+    box-shadow: hsla(0, 0%, 96.1%, 0.2) 0 0 8px;
+    background-color: #2b3945;
+}
+
+.header__title {
+    font-weight: 700;
+}
+
+.header__title_dark {
+    font-weight: 700;
+    color: #fff;
+}
+
+.header__themebutton_light {
+    background-color: #fff;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.header__themebutton_dark {
+    background-color: #2b3945;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.header__button_dark {
+    color: #fff;
+}

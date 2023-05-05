@@ -1,0 +1,23 @@
+body[data-theme='dark'] {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(207, 26%, 17%);
+    box-shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
+}
+
+body[data-theme='light'] {
+    color: hsl(200, 15%, 8%);
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #111517;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
