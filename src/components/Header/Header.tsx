@@ -15,7 +15,11 @@ const Header: FC = () => {
     }, [theme]);
 
     return (
-        <header className={theme === 'dark' ? styles.header__dark : ''}>
+        <header
+            className={
+                theme === 'dark' ? styles.header__dark : styles.header__light
+            }
+        >
             <div className={cn('container', styles.header)}>
                 <Link
                     className={

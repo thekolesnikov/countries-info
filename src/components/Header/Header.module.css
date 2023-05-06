@@ -10,6 +10,11 @@
     background-color: #2b3945;
 }
 
+.header__light {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #fff;
+}
+
 .header__title {
     font-weight: 700;
 }

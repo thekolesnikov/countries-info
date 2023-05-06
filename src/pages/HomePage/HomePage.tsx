@@ -2,14 +2,15 @@ import { FC } from 'react';
 
 import styles from './HomePage.module.css';
 import SearchInput from '../../components/SearchInput/SearchInput';
+import Filters from '../../components/Filters/Filters';
 
 const HomePage: FC = () => {
-    const theme = document.body.getAttribute('data-theme');
     return (
-        <main className={theme === 'dark' ? styles.dark : styles.light}>
+        <main className={styles}>
             <div className="container">
-                <div>
+                <div className={styles.controls}>
                     <SearchInput />
+                    <Filters />
                 </div>
             </div>
         </main>
