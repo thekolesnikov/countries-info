@@ -1,0 +1,10 @@
+.countrylist {
+    margin: 50px -30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.notfound {
+    padding-left: 30px;
+}
