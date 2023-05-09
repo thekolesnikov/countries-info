@@ -1,7 +1,9 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import Select from 'react-select';
 
 const Filters: FC = () => {
+    // const [region, setRegion] = useState('');
+
     const options = [
         { value: 'Africa', label: 'Africa' },
         { value: 'America', label: 'America' },
