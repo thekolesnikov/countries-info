@@ -21,6 +21,23 @@ const HomePage: FC = () => {
             return (e as Error).message;
         }
     }
+
+    function filterCountries(region: string | undefined) {
+        fetchCountries(ALL_COUNTRIES).then((data) => setCountries(data));
+
+        // if (region === undefined) {
+
+        // }
+
+        if (region && Array.isArray(countries)) {
+            fetchCountries(ALL_COUNTRIES).then((data) => setCountries(data));
+            let data: any = countries.filter((c: any) => c.region === region);
+            setCountries(data);
+        }
+    }
+
+    console.log('render');
+
     useEffect(() => {
         if (!inputValue) {
             fetchCountries(ALL_COUNTRIES).then((data) => setCountries(data));
@@ -39,7 +56,7 @@ const HomePage: FC = () => {
                         inputValue={inputValue}
                         setInputValue={setInputValue}
                     />
-                    <Filters />
+                    <Filters filterCountries={filterCountries} />
                 </div>
                 <CountryList countries={countries} />
             </div>

@@ -1,8 +1,12 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import Select from 'react-select';
 
-const Filters: FC = () => {
-    // const [region, setRegion] = useState('');
+type Props = {
+    filterCountries: (region: string | undefined) => void;
+};
+
+const Filters: FC<Props> = ({ filterCountries }) => {
+    // const [region, setRegion] = useState<string | undefined>('');
 
     const options = [
         { value: 'Africa', label: 'Africa' },
@@ -12,12 +16,20 @@ const Filters: FC = () => {
         { value: 'Oceania', label: 'Oceania' },
     ];
 
+    // useEffect(() => {
+    //     filterCountries(region);
+    // }, [region]);
+
     return (
         <Select
             isSearchable={false}
             isClearable={true}
             placeholder="Filter by Region"
             options={options}
+            onChange={(value) => {
+                filterCountries(value?.value);
+                // setRegion(value?.value)
+            }}
         />
     );
 };
